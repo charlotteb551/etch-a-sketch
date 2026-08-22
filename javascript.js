@@ -10,6 +10,12 @@ function createGrid(size){
         square.classList.add("square");
 
         square.addEventListener("mouseenter",() => {
+            let currentOpacity = Number(square.style.opacity);
+
+            if(currentOpacity<1){
+                currentOpacity += 0.1;
+                square.style.opacity = currentOpacity;
+            }
             square.style.backgroundColor = "black";
         });
 
